@@ -94,15 +94,39 @@
       </ul>
     </section>
 
-    <section class="interactive">
+    <section class="main-housing-search">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <!-- Здесь будет карта -->
+      <button type="button">Поиск гостиницы в седоне</button>
+
+      <form class="visually-hidden main-housing-search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="submit" value="Найти">
+        <p class="form-date">
+          <label for="date-arrival">Дата заезда:</label>
+          <input type="text" id="date-arrival"  name="date-arrival" value="" placeholder="01.06.2018" required>
+        </p>
+      	<p class="form-date">
+          <label for="date-departure">Дата выезда:</label>
+          <input type="text" id="date-departure" name="date-arrival" value="" placeholder="15.06.2018" required>
+        </p>
+
+				<div class="half-width">
+	        <label for="amount-adults">Взрослые:</label>
+	        <input type="number" id="amount-adults" name="amount-adults" min=1 value=2>
+        </div>
+        <div class="half-width">
+	        <label for="amount-kids">Дети:</label>
+	        <input type="number" id="amount-kids" name="amount-kids" min=0 value=0>
+        </div>
+        <input type="submit" value="Найти">
+      </form>
     </section>
 
-    <section class="modal modal-search">
-      <h2>Поиск гостиницы в седоне</h2>
-      <!-- Здесь будет форма -->
+    <section class="main-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map-location.jpg" alt="Адрес на карте">
+      </p>
     </section>
   </main>
 

@@ -25,30 +25,64 @@
     <h1 class="visually-hidden">Sedona - подбор отелей</h1>
 
     <section class="search-tools">
-      <h2 class="visually-hidden">Инструметы поиска</h2>
+      <h2 class="visually-hidden">Форма с инструметами поиска</h2>
       
-      <div class="checkboxes-group">
-        <h3>Инфраструктура</h3>
-        <ul class="checkboxes-list">
-          <li class="checkboxes-list-el-1">Бассейн</li>
-          <li class="checkboxes-list-el-0">Парковка</li>
-          <li class="checkboxes-list-el-0">Wi-fi</li>
-        </ul>
-      </div>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <!-- oninput="housing-search-form-output-gt.value=housing-search-form-slider-gt.value" -->
 
-      <div class="checkboxes-group">
-        <h3>Тип жилья:</h3>
-        <ul class="checkboxes-list">
-          <li class="checkboxes-list-el-1">Гостиница</li>
-          <li class="checkboxes-list-el-1">Отель</li>
-          <li class="checkboxes-list-el-1">Аппартаменты</li>
-        </ul>
-      </div>
+        <fieldset class="housing-search-form-fieldset">
+            <legend>Инфраструктура:</legend>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="infrastructure-pool"  checked>
+                  <!-- <span class="checkbox-indicator"></span> -->
+                  <!-- ^^^ Пока не решил, делать так или через ::after -->
+                  Бассейн
+            </label>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="infrastructure-parking-lot">
+                  Парковка
+            </label>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="infrastructure-wi-fi">
+                  Wi-fi
+            </label>
+        </fieldset>
 
-      <div>
-        <h3>Стоимость в сутки (р):</h3>
-        <a class="button-transparent" href="#">Показать</a>
-      </div>
+        <fieldset class="housing-search-form-fieldset">
+            <legend>Тип жилья:</legend>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="housing-hotel" checked>
+                  Гостиница
+            </label>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="housing-motel" checked>
+                  Мотель
+            </label>
+            <label>
+                  <input class="visually-hidden" type="checkbox" name="housing-appartments" checked>
+                  Аппартаменты
+            </label>
+        </fieldset>
+
+        <fieldset class="housing-search-form-fieldset">
+            <legend>Стоимость в сутки (р):</legend>
+            <div class="housing-search-form-output">
+                  <output id="housing-search-form-output-gt" name="housing-search-form-output-gt">10</output>
+            </div>
+            <label><!-- Или Стоимость в сутки (р): лучше засунуть сюда? -->
+              <!-- 
+                Как сделать 2Х-слайдер? в курсах такого не было,
+                а в интернете народ говорит, что только через jQuery или другие извращения 
+                https://stackoverflow.com/questions/4753946/html5-slider-with-two-inputs-possible
+              -->
+              <span class="visually-hidden">0</span>
+              <input type="range" id="housing-search-form-slider-gt" min=0 max=3600 step=100 value=200>
+              <span class="visually-hidden">3600</span>
+            </label>
+
+            <input type="submit" value="Показать">
+        </fieldset>
+      </form>
     </section>
 
     <section class="search-results-container">
