@@ -28,7 +28,6 @@
       <h2 class="visually-hidden">Форма с инструметами поиска</h2>
       
       <form action="https://echo.htmlacademy.ru" method="post">
-        <!-- oninput="housing-search-form-output-gt.value=housing-search-form-slider-gt.value" -->
 
         <fieldset class="housing-search-form-fieldset">
             <legend>Инфраструктура:</legend>
@@ -67,20 +66,15 @@
         <fieldset class="housing-search-form-fieldset">
             <legend>Стоимость в сутки (р):</legend>
             <div class="housing-search-form-output">
-                  <output id="housing-search-form-output-gt" name="housing-search-form-output-gt">10</output>
+                  <output id="housing-search-form-output" name="housing-search-form-output">10</output>
             </div>
             <label><!-- Или Стоимость в сутки (р): лучше засунуть сюда? -->
-              <!-- 
-                Как сделать 2Х-слайдер? в курсах такого не было,
-                а в интернете народ говорит, что только через jQuery или другие извращения 
-                https://stackoverflow.com/questions/4753946/html5-slider-with-two-inputs-possible
-              -->
               <span class="visually-hidden">0</span>
-              <input type="range" id="housing-search-form-slider-gt" min=0 max=3600 step=100 value=200>
+              <input type="range" id="housing-search-form-slider" min=0 max=3600 step=100 value=200>
               <span class="visually-hidden">3600</span>
             </label>
 
-            <input type="submit" value="Показать">
+            <button type="submit">Показать</button>
         </fieldset>
       </form>
     </section>

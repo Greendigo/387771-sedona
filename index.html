@@ -99,26 +99,25 @@
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button type="button">Поиск гостиницы в седоне</button>
 
-      <form class="visually-hidden main-housing-search-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="submit" value="Найти">
-        <p class="form-date">
+      <form class="main-housing-search-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="form-group">
           <label for="date-arrival">Дата заезда:</label>
           <input type="text" id="date-arrival"  name="date-arrival" value="" placeholder="01.06.2018" required>
         </p>
-      	<p class="form-date">
+      	<p class="form-group">
           <label for="date-departure">Дата выезда:</label>
-          <input type="text" id="date-departure" name="date-arrival" value="" placeholder="15.06.2018" required>
+          <input type="text" id="date-departure" name="date-departure" value="" placeholder="15.06.2018" required>
         </p>
 
-				<div class="half-width">
+				<p class="form-group form-group-half">
 	        <label for="amount-adults">Взрослые:</label>
 	        <input type="number" id="amount-adults" name="amount-adults" min=1 value=2>
-        </div>
-        <div class="half-width">
+        </p>
+        <p class="form-group form-group-half">
 	        <label for="amount-kids">Дети:</label>
 	        <input type="number" id="amount-kids" name="amount-kids" min=0 value=0>
-        </div>
-        <input type="submit" value="Найти">
+        </p>
+        <button type="submit">Найти</button>
       </form>
     </section>
 
