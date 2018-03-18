@@ -7,12 +7,12 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <nav class="main-navi">
-      <a class="main-header-logo">
-				<img src="http://placehold.it/150x100" width="150" height="150" alt="City of Sedona Logo">
+  <header class="site-header">
+    <nav class="site-navi">
+      <a class="site-logo">
+				<img src="img/mini-logo-city-of-sedona.png" alt="City of Sedona Logo">
 			</a>
-      <ul class="site-navi">
+      <ul>
         <li><a href="info.html">Информация</a></li>
         <li><a href="media.html">Фото и видео</a></li>
         <li><a href="map_of_state.html">Карта штата</a></li>
@@ -21,7 +21,7 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
+  <main class="container-index"> 
     <h1 class="visually-hidden">Sedona - главная страница</h1>
     
     <div class="title-image">
@@ -30,7 +30,12 @@
       </div>
     </div>
 
-    <section class="feature-text-image-container">
+		<section class="introduction">
+			<h2>Седона — небольшой городок в Аризоне,  заслуживающий большего!</h2>
+    	<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+		</div>
+    
+    <section class="feature-container container-rich">
     	<h2 class="visually-hidden">Sedona - настоящий городок</h2>
       <div class="feature-text-emphasis">
         <h3>Настоящий городок</h3>
@@ -42,25 +47,25 @@
       </div>
     </section>
 
-    <section class="feature-advertisement">
+    <section class="feature-container container-ad">
     	<h2 class="visually-hidden">Sedona - где, что и как</h2>
-      <ul class="features-ad-list">
-        <li class="feature-ad-item">
+      <ul class="feature-ad-list">
+        <li class="feature-ad-item ad-item-housing">
           <h3>Жилье</h3>
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
-        <li class="feature-ad-item">
+        <li class="feature-ad-item ad-item-food">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li class="feature-ad-item">
+        <li class="feature-ad-item ad-item-gifts">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
       </ul>
     </section>
 
-    <section class="feature-text-image-container">
+    <section class="feature-container container-rich">
     	<h2 class="visually-hidden">Sedona - мост дьявола</h2>
       <div class="feature-image">
         <img src="img/devil-bridge.jpg" alt="Devil's Bridge">
@@ -72,11 +77,10 @@
       </div>
     </section>
 
-    <section class="feature-mini-container">
+    <section class="feature-container container-mini">
     	<h2 class="visually-hidden">Sedona - прочие плюсы</h2>
-      <ul class="features-mini-list">
+      <ul class="feature-mini-list">
         <li class="feature-mini-item">
-          <!-- <class="feature-text"> -->
           <h3>Небольшая площадь</h3>
           <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
@@ -94,12 +98,12 @@
       </ul>
     </section>
 
-    <section class="main-housing-search">
+    <section class="housing-search">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button type="button">Поиск гостиницы в седоне</button>
 
-      <form class="main-housing-search-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="housing-search-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="form-group">
           <label for="date-arrival">Дата заезда:</label>
           <input type="text" id="date-arrival"  name="date-arrival" value="" placeholder="01.06.2018" required>
@@ -121,23 +125,23 @@
       </form>
     </section>
 
-    <section class="main-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
+    <section class="map-location">
+      <h2 class="visually-hidden">Седона на карте</h2>
       <p>
-        <img src="img/map-location.jpg" alt="Адрес на карте">
+        <img src="img/map-location.jpg" alt="Расположение Седоны на карте">
       </p>
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="site-footer">
     <b>#visitsedona</b>
     <ul class="social-media-contacts">
-      <li><a class="social-button" href="#">Twitter</a></li>
-      <li><a class="social-button" href="#">Facebook</a></li>
-      <li><a class="social-button" href="#">YouTube</a></li>
+      <li><a class="button-social twitter" href="#">Twitter</a></li>
+      <li><a class="button-social facebook" href="#">Facebook</a></li>
+      <li><a class="button-social youtube" href="#">YouTube</a></li>
     </ul>
     <span class="authority-mark">
-			Website by <a href="https://htmlacademy.ru/"></a>
+			Website by <a class="html-academy" href="https://htmlacademy.ru/">HTML-Academy</a>
 		</span>
   </footer>
 </body>
