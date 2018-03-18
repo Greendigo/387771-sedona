@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "PT Sans";
+  src:
+    local: "PT Sans", local: "PTSans",
+    url("../font/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src:
+    local: "PT Sans Bold", local: "PTSansBold",
+    url("../font/ptsansbold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+ body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ------------------- header -------------------*/
+.site-navi {
+  font-size: 14px;
+}
+
+.site-navi a {
+  color: #333;
+}
+
+.site-navi,
+.introduction {
+  color: #333;
+}
+
+.site-navi ul,
+.feature-ad-list,
+.feature-mini-list,
+.sorting-parameters,
+.sorting-destination,
+.search-results-list,
+.social-media-contacts {
+  list-style: none;
+}
+
+.site-navi li {
+  display: inline-block;
+}
+
+/* ------------------- index -------------------*/
+.title-image {
+  background-image:
+    url("../img/sedona-title-image-bottom-mask.png.jpg"),
+    url("../img/sedona-title-image-mountains.jpg");
+  background-color: #81b3d2;
+}
+
+.introduction h2,
+.feature-container h3,
+.housing-search > button,
+.housing-search-form button,
+.housing-search-results h2,
+.hotel-card-central h3,
+.site-footer b {
+  font-size: 21px;
+}
+
+.introduction p,
+.feature-container p,
+.housing-search > p,
+.authority-mark {
+  font-weight: normal;
+}
+
+.feature-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 21px;
+}
+
+.container-rich {
+  background-color: #81b3d2;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.container-mini {
+  background-color: #eee;
+}
+
+.feature-text-emphasis,
+.feature-ad-item,
+.feature-mini-item {
+  width: 33%;
+  display: inline-block;
+}
+
+.feature-image {
+  display: inline-block;
+}
+
+.feature-text-emphasis {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.feature-ad-item.ad-item-housing {
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+}
+
+
+.feature-ad-item.ad-item-food {
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+}
+
+
+.feature-ad-item.ad-item-gifts {
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+}
+
+.housing-search > h2{
+  line-height: 30px;
+  font-size: 36px;
+}
+
+/*
+Как задать ширину и высоту формы и кнопок (чуть ниже)?
+Подозреваю, что кнопки можно сделать display:block,
+ а с формой как, она же и так блочная?
+*/
+.housing-search-form {
+  width: 568;
+  height: 395;
+}
+
+.housing-search > button,
+.housing-search-form > button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.housing-search > button {
+  width: 568;
+  height: 86;
+  color: #fff;
+  background-color: #766357;
+}
+
+.housing-search-form > button {
+  width: 458;
+  height: 58;
+  color: #fff;
+  background-color: #81b3d2;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group-half {
+  display: inline-block;
+  width: 50%;
+}
+
+/* ------------------- catalog -------------------*/
+/*почему-то 2ой селектор не пашет*/
+.search-tools-form .form-fieldset,
+.housing-search-results h2:not(.visually-hidden)
+.search-results-sorting,
+.search-results-sorting h3,
+.search-results-sorting ul,
+.sorting-parameters li,
+.sorting-destination li,
+.hotel-card-image,
+.hotel-card-central,
+.hotel-card-rating {
+  display: inline-block;
+}
+
+.form-fieldset
+.form-fieldset label,
+.form-fieldset button,
+.hotel-card-info span,
+.hotel-card-button,
+.rating-score {
+  line-height: 21px;
+}
+
+.form-fieldset legend {
+  font-size: 16p;
+}
+
+.form-fieldset label {
+  font-weight: normal;
+}
+
+.housing-search-tools {
+  background-image: url("../img/sedona-title-image-blurred-w-effects.jpg");
+  background-color: #81b3d2;
+  color: #fff;
+}
+
+.sorting-parameters a {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.sorting-destination a {
+  display: inline-block;
+}
+
+.hotel-card-central a {
+  color: #000; 
+}
+
+.hotel-card-info {
+  font-weight: normal; 
+}
+
+.hotel-card-button {
+  color: #fff;
+}
+
+.button-detailed {
+  background-color: #81b3d2;
+}
+
+.button-reserve {
+  background-color: #766357;
+}
+
+.rating-score {
+  color: #666;
+  font-weight: normal; 
+  background-color: #f2f2f2;
+}
+
+/* ------------------- footer -------------------*/
+/*блок с академией почему-то съезжает на строку вниз*/
+.site-footer > b,
+.site-footer > ul,
+.site-footer > span,
+.social-media-contacts li {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.button-social {
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+}
+
+.button-social.twitter {
+  background-image: url("../img/icon-logo-twitter.svg");
+}
+
+.button-social.facebook {
+  background-image: url("../img/icon-logo-fb.svg");
+}
+
+.button-social.youtube {
+  background-image: url("../img/icon-logo-youtube.svg");
+}
+
+.html-academy {
+  background-image: url("../img/icon-logo-html-academy.svg");
+  background-repeat: no-repeat;
+}
+
+/* ------------------- Обработчики событий -------------------*/
+/*в стайлгайде есть отдельное состояние "Активный, находимся на странице". Это что?*/
+.site-navi a:hover,
+.site-navi a:focus {
+  color: #81b3d2;
+}
+
+.site-navi a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-parameters a,
+.sorting-parameters a:hover {
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-parameters a:focus,
+.sorting-parameters a:active {
+  border-bottom: none;
+}
+
+.sorting-parameters a:focus,
+.sorting-parameters a:hover {
+  color: #81b3d2;
+}
+
+.sorting-parameters a:active {
+  color: #000;
+}
+
+.sorting-destination a:focus,
+.sorting-destination a:active {
+  color: #81b3d2;
+}
+
+.sorting-destination a:hover {
+  color: #000;
+}
+
+.hotel-card-central a:focus,
+.hotel-card-central a:hover {
+  color: #81b3d2;
+}
+
+.hotel-card-central a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*
+При наведении почему-то остается светло-голубой, не темнеет
+ (в каталоге, в индексе кнопки формы нормально работают).
+И что делать с ссылками в соцсети, их сюда же пихать,
+ или отдельно оформляться будут?
+ */
+.housing-search-form > button:focus,
+.housing-search-form > button:hover,
+/*.button-social:focus,
+.button-social:hover,*/
+.button-detailed:focus,
+.button-detailed:hover {
+  background-color: #669ec0;
+}
+
+.housing-search-form > button:active,
+/*.button-social:active,*/
+.button-detailed:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #5496bd;
+}
+
+/*
+При наведении почему-то становится голубой
+(в каталоге, в индексе кнопки формы нормально работают).
+*/
+.housing-search > button:focus,
+.housing-search > button:hover,
+.button-reserve:focus,
+.button-reserve:hover {
+  background-color: #604e43;
+}
+
+.housing-search > button:active,
+.button-reserve:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #503e33;
+}
