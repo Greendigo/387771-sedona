@@ -1,7 +1,7 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    local: "PT Sans", local: "PTSans",
+    local("PT Sans"), local("PTSans"),
     url("../font/ptsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "PT Sans";
   src:
-    local: "PT Sans Bold", local: "PTSansBold",
+    local("PT Sans Bold"), local("PTSansBold"),
     url("../font/ptsansbold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -26,7 +26,6 @@
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
-  text-align: center;
 }
 
 a {
@@ -44,6 +43,16 @@ a {
   overflow: hidden;
 }
 
+.site-navi ul,
+.feature-ad-list,
+.feature-mini-list,
+.sorting-parameters,
+.sorting-destination,
+.search-results-list,
+.social-media-contacts {
+  list-style: none;
+}
+
 /* ------------------- header -------------------*/
 .site-navi {
   font-size: 14px;
@@ -58,19 +67,9 @@ a {
   color: #333;
 }
 
-.site-navi ul,
-.feature-ad-list,
-.feature-mini-list,
-.sorting-parameters,
-.sorting-destination,
-.search-results-list,
-.social-media-contacts {
-  list-style: none;
-}
-
-.site-navi li {
+/*.site-navi li {
   display: inline-block;
-}
+}*/
 
 /* ------------------- index -------------------*/
 .title-image {
@@ -80,20 +79,11 @@ a {
   background-color: #81b3d2;
 }
 
-.introduction h2,
-.feature-container h3,
-.housing-search > button,
-.housing-search-form button,
-.housing-search-results h2,
-.hotel-card-central h3,
-.site-footer b {
+.introduction h2 {
   font-size: 21px;
 }
 
-.introduction p,
-.feature-container p,
-.housing-search > p,
-.authority-mark {
+.introduction p {
   font-weight: normal;
 }
 
@@ -102,6 +92,14 @@ a {
   margin: 0;
   padding: 0;
   line-height: 21px;
+}
+
+.feature-container h3 {
+  font-size: 21px;
+}
+
+.feature-container p {
+  font-weight: normal;
 }
 
 .container-rich {
@@ -114,7 +112,7 @@ a {
   background-color: #eee;
 }
 
-.feature-text-emphasis,
+/*.feature-text-emphasis,
 .feature-ad-item,
 .feature-mini-item {
   width: 33%;
@@ -124,7 +122,7 @@ a {
 .feature-image {
   display: inline-block;
 }
-
+*/
 .feature-text-emphasis {
   padding-top: 50px;
   padding-bottom: 40px;
@@ -147,24 +145,24 @@ a {
   background-repeat: no-repeat;
 }
 
-.housing-search > h2{
+.housing-search > p {
+  font-weight: normal;
+}
+
+.housing-search > h2 {
   line-height: 30px;
   font-size: 36px;
 }
 
-/*
-Как задать ширину и высоту формы и кнопок (чуть ниже)?
-Подозреваю, что кнопки можно сделать display:block,
- а с формой как, она же и так блочная?
-*/
-.housing-search-form {
+/*.housing-search-form {
   width: 568;
   height: 395;
-}
+}*/
 
 .housing-search > button,
 .housing-search-form > button {
   font: inherit;
+  font-size: 21px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -186,44 +184,27 @@ a {
   background-color: #81b3d2;
 }
 
-.form-group {
+/*.form-group {
   width: 100%;
-}
+}*/
 
-.form-group-half {
-  display: inline-block;
+/*.form-group-half {
   width: 50%;
-}
+}*/
 
 /* ------------------- catalog -------------------*/
-/*почему-то 2ой селектор не пашет*/
-.search-tools-form .form-fieldset,
-.housing-search-results h2:not(.visually-hidden)
-.search-results-sorting,
-.search-results-sorting h3,
-.search-results-sorting ul,
-.sorting-parameters li,
-.sorting-destination li,
-.hotel-card-image,
-.hotel-card-central,
-.hotel-card-rating {
-  display: inline-block;
-}
-
-.form-fieldset
-.form-fieldset label,
-.form-fieldset button,
-.hotel-card-info span,
-.hotel-card-button,
-.rating-score {
-  line-height: 21px;
-}
 
 .form-fieldset legend {
   font-size: 16p;
 }
 
+.form-fieldset,
+.form-fieldset button {
+  line-height: 21px;
+}
+
 .form-fieldset label {
+  line-height: 21px;
   font-weight: normal;
 }
 
@@ -238,11 +219,17 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
-.sorting-destination a {
+/*.sorting-destination a {
   display: inline-block;
+}*/
+
+
+.housing-search-results h2,
+.hotel-card-central h3 {
+  font-size: 21px;
 }
 
 .hotel-card-central a {
@@ -253,8 +240,13 @@ a {
   font-weight: normal; 
 }
 
+.hotel-card-info span {
+  line-height: 21px;
+}
+
 .hotel-card-button {
   color: #fff;
+  line-height: 21px;
 }
 
 .button-detailed {
@@ -268,18 +260,23 @@ a {
 .rating-score {
   color: #666;
   font-weight: normal; 
+  line-height: 21px;
   background-color: #f2f2f2;
 }
 
 /* ------------------- footer -------------------*/
 /*блок с академией почему-то съезжает на строку вниз*/
-.site-footer > b,
+/*.site-footer > b,
 .site-footer > ul,
 .site-footer > span,
 .social-media-contacts li {
   display: inline-block;
   width: 33%;
   text-align: center;
+}*/
+
+.site-footer b {
+  font-size: 21px;
 }
 
 .button-social {
@@ -297,6 +294,10 @@ a {
 
 .button-social.youtube {
   background-image: url("../img/icon-logo-youtube.svg");
+}
+
+.authority-mark {
+  font-weight: normal;
 }
 
 .html-academy {
