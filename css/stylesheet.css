@@ -54,6 +54,10 @@ a {
 }
 
 /* ------------------- header -------------------*/
+.site-header: {
+  margin-bottom: 0;
+}
+
 .site-navi {
   font-size: 14px;
 }
@@ -62,21 +66,37 @@ a {
   color: #333;
 }
 
-.site-navi,
-.introduction {
+.site-navi {
   color: #333;
 }
 
-/*.site-navi li {
-  display: inline-block;
-}*/
+.site-navi ul {
+  margin: 0;
+  padding: 0;
+}
+
+.site-navi a.active-page {
+  color: #766357;
+}
+
+.site-navi a:hover,
+.site-navi a:focus {
+  color: #81b3d2;
+}
+
+.site-navi a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 
 /* ------------------- index -------------------*/
 .title-image {
-  background-image:
-    url("../img/sedona-title-image-bottom-mask.png.jpg"),
-    url("../img/sedona-title-image-mountains.jpg");
-  background-color: #81b3d2;
+  background-image: url("../img/sedona-title-image-w-mask-w-effects.jpg");
+  background-color: ##515F66;
+}
+
+.introduction {
+  color: #333;
 }
 
 .introduction h2 {
@@ -105,24 +125,12 @@ a {
 .container-rich {
   background-color: #81b3d2;
   color: #fff;
-  vertical-align: middle;
 }
 
 .container-mini {
   background-color: #eee;
 }
 
-/*.feature-text-emphasis,
-.feature-ad-item,
-.feature-mini-item {
-  width: 33%;
-  display: inline-block;
-}
-
-.feature-image {
-  display: inline-block;
-}
-*/
 .feature-text-emphasis {
   padding-top: 50px;
   padding-bottom: 40px;
@@ -171,17 +179,37 @@ a {
 }
 
 .housing-search > button {
-  width: 568;
-  height: 86;
+  width: 568px;
+  height: 86px;
   color: #fff;
   background-color: #766357;
 }
 
 .housing-search-form > button {
-  width: 458;
-  height: 58;
+  width: 458px;
+  height: 58px;
   color: #fff;
   background-color: #81b3d2;
+}
+
+.housing-search > button:focus,
+.housing-search > button:hover {
+  background-color: #604e43;
+}
+
+.housing-search-form > button:focus,
+.housing-search-form > button:hover {
+  background-color: #669ec0;
+}
+
+.housing-search > button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #503e33;
+}
+
+.housing-search-form > button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #5496bd;
 }
 
 /*.form-group {
@@ -195,7 +223,7 @@ a {
 /* ------------------- catalog -------------------*/
 
 .form-fieldset legend {
-  font-size: 16p;
+  font-size: 16px;
 }
 
 .form-fieldset,
@@ -219,7 +247,35 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
+  border-bottom: 1px dotted #81b3d2;
   /*display: inline-block;*/
+}
+
+.sorting-parameters a:hover {
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-parameters a:focus,
+.sorting-parameters a:active {
+  border-bottom: none;
+}
+
+.sorting-parameters a:focus,
+.sorting-parameters a:hover {
+  color: #81b3d2;
+}
+
+.sorting-parameters a:active {
+  color: #000;
+}
+
+.sorting-destination a:focus,
+.sorting-destination a:active {
+  color: #81b3d2;
+}
+
+.sorting-destination a:hover {
+  color: #000;
 }
 
 /*.sorting-destination a {
@@ -232,8 +288,17 @@ a {
   font-size: 21px;
 }
 
-.hotel-card-central a {
+.hotel-card-central > a {
   color: #000; 
+}
+
+.hotel-card-central > a:focus,
+.hotel-card-central > a:hover {
+  color: #81b3d2;
+}
+
+.hotel-card-central > a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-card-info {
@@ -257,6 +322,26 @@ a {
   background-color: #766357;
 }
 
+.button-detailed:focus,
+.button-detailed:hover {
+  background-color: #669ec0;
+}
+
+.button-detailed:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #5496bd;
+}
+
+.button-reserve:focus,
+.button-reserve:hover {
+  background-color: #604e43;
+}
+
+.button-reserve:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #503e33;
+}
+
 .rating-score {
   color: #666;
   font-weight: normal; 
@@ -265,16 +350,6 @@ a {
 }
 
 /* ------------------- footer -------------------*/
-/*блок с академией почему-то съезжает на строку вниз*/
-/*.site-footer > b,
-.site-footer > ul,
-.site-footer > span,
-.social-media-contacts li {
-  display: inline-block;
-  width: 33%;
-  text-align: center;
-}*/
-
 .site-footer b {
   font-size: 21px;
 }
@@ -303,91 +378,4 @@ a {
 .html-academy {
   background-image: url("../img/icon-logo-html-academy.svg");
   background-repeat: no-repeat;
-}
-
-/* ------------------- Обработчики событий -------------------*/
-/*в стайлгайде есть отдельное состояние "Активный, находимся на странице". Это что?*/
-.site-navi a:hover,
-.site-navi a:focus {
-  color: #81b3d2;
-}
-
-.site-navi a:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.sorting-parameters a,
-.sorting-parameters a:hover {
-  border-bottom: 1px dotted #81b3d2;
-}
-
-.sorting-parameters a:focus,
-.sorting-parameters a:active {
-  border-bottom: none;
-}
-
-.sorting-parameters a:focus,
-.sorting-parameters a:hover {
-  color: #81b3d2;
-}
-
-.sorting-parameters a:active {
-  color: #000;
-}
-
-.sorting-destination a:focus,
-.sorting-destination a:active {
-  color: #81b3d2;
-}
-
-.sorting-destination a:hover {
-  color: #000;
-}
-
-.hotel-card-central a:focus,
-.hotel-card-central a:hover {
-  color: #81b3d2;
-}
-
-.hotel-card-central a:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-/*
-При наведении почему-то остается светло-голубой, не темнеет
- (в каталоге, в индексе кнопки формы нормально работают).
-И что делать с ссылками в соцсети, их сюда же пихать,
- или отдельно оформляться будут?
- */
-.housing-search-form > button:focus,
-.housing-search-form > button:hover,
-/*.button-social:focus,
-.button-social:hover,*/
-.button-detailed:focus,
-.button-detailed:hover {
-  background-color: #669ec0;
-}
-
-.housing-search-form > button:active,
-/*.button-social:active,*/
-.button-detailed:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #5496bd;
-}
-
-/*
-При наведении почему-то становится голубой
-(в каталоге, в индексе кнопки формы нормально работают).
-*/
-.housing-search > button:focus,
-.housing-search > button:hover,
-.button-reserve:focus,
-.button-reserve:hover {
-  background-color: #604e43;
-}
-
-.housing-search > button:active,
-.button-reserve:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #503e33;
 }
