@@ -75,7 +75,7 @@ a {
   padding: 0;
 }
 
-.site-navi active-page {
+.site-navi .active-page {
   color: #766357;
 }
 
