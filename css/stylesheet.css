@@ -93,10 +93,10 @@ input[type="radio"].visually-hidden {
 }
 
 .navi-links li {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  width: 105px;
   vertical-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 115px;
 }
 
 .navi-info,
@@ -110,11 +110,11 @@ input[type="radio"].visually-hidden {
 }
 
 .navi-info {
-  margin-right: 135px;
+  margin-right: 125px;
 }
 
 .navi-catalog {
-  margin-left: 135px;
+  margin-left: 125px;
 }
 
 .navi-media {
