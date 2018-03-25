@@ -393,6 +393,13 @@ input[type="radio"].visually-hidden {
   margin-left: 50px;
 }
 
+/*
+Как делать +-, учитывая, что они должны менять цвет при взаимодействии?
+Я закинул спрайт в изображения, он пойдет для этой цели?
+Просто при взаимодействии будем двигать бэкграунд у кнопки?
+*/
+/*Календарик сделаю завтра, пока не дошел*/
+
 .housing-search > button,
 .housing-search-form > button {
   font: inherit;
@@ -421,6 +428,10 @@ input[type="radio"].visually-hidden {
   background-color: #5496bd;
 }
 
+/*
+Как сделать, чтобы форма в открытом виде налезала на карту?
+Я так понимаю, ее скрывать через JS, это на одной из последних лекций разбирается?
+*/
 .map-location {
   background-image: url("../img/map-location.jpg");
   background-repeat: no-repeat;
@@ -534,6 +545,8 @@ input[type="radio"].visually-hidden {
   width: 26px;
   height: 23px;
 }
+
+/*Слайдеры сделаю завтра, пока не дошел*/
 
 .housing-search-results {
   margin: 0;
