@@ -649,11 +649,32 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-.hotel-card-image,
-.hotel-card-central,
-.hotel-card-rating {
+.search-results-item {
+  list-style: none;
+  margin: 0;
+  padding: 30px 73px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.hotel-card-image {
+  margin: 0;
+  padding: 0;
+  padding-right: 30px;
   width: 135px;
   height: 90px;
+}
+
+.hotel-card-central {
+  width: 363px;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
 }
 
 .hotel-card-central h3 {
@@ -716,7 +737,43 @@ input[type="radio"].visually-hidden {
   background-color: #503e33;
 }
 
+.hotel-card-rating {
+  width: 241px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/*Откуда берутся красные кружки?*/
+.rating-stars-list {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 0;
+  margin: 0;
+  height: 17px;
+  width: 115px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rating-stars-list li {
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  height: 17px;
+  width: 18px;
+  background-image: url("../img/icon-star.svg");
+  background-repeat: no-repeat;
+}
+
 .rating-score {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  widht: 111px;
+  padding: 3px 13px 3px 16px;
+  margin: 0;
   color: #666;
   font-weight: normal; 
   line-height: 21px;
