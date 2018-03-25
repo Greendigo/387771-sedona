@@ -429,20 +429,37 @@ input[type="radio"].visually-hidden {
 }
 
 
-/*.form-group-half {
-  width: 50%;
-}*/
-
-/* ------------------- catalog -------------------*/
-
-.form-fieldset legend {
-  font-size: 16px;
+.housing-search-tools {
+  background-image: url("../img/sedona-title-image-blurred-w-effects.jpg");
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+  width: 1200px;
+  color: #fff;
 }
 
-.form-fieldset,
-.form-fieldset button {
-  line-height: 21px;
+/* ------------------- catalog -------------------*/
+.search-tools-form {
+  margin: 0;
+  padding: 31px 73px;
+  display: flex;
+}
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
   border: none;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-fieldset legend {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
+  font-size: 16px;
 }
 
 .form-fieldset label {
@@ -450,13 +467,72 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
-.housing-search-tools {
-  background-image: url("../img/sedona-title-image-blurred-w-effects.jpg");
+.form-fieldset button {
+  line-height: 21px;
+  border: none;
+}
+
+.fieldset-infrastructure {
+  width: 200px;
+  margin-right: 54px;
+}
+
+.fieldset-housing {
+  width: 200px;
+  margin-right: auto;
+}
+
+.fieldset-price {
+  width: 328px;
+}
+
+.fieldset-infrastructure .checkbox-container {
+  padding-left: 40px;
+}
+
+.fieldset-housing .checkbox-container {
+  padding-left: 42px;
+}
+
+.checkbox-container {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  position: relative;
+}
+
+.fieldset-infrastructure .checkbox-container:last-child,
+.fieldset-housing .checkbox-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Нужно ли это?
+.checkbox-container label {
+  cursor: pointer;
+  user-select: none;  
+}
+*/
+
+.checkbox-field:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-color: #81b3d2;
-  width: 1200px;
-  height: 562px;
-  color: #fff;
+  width: 23px;
+  height: 23px;
+}
+
+.checkbox-field:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 23px;
 }
 
 .sorting-parameters,

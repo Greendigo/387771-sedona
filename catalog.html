@@ -14,11 +14,11 @@
       <a class="site-logo" href="index.html">
         <img src="img/mini-logo-city-of-sedona.png" alt="City of Sedona Logo">
       </a>
-      <ul>
-        <li><a class="navi-info">Информация</a></li><!-- href="info.html" -->
-        <li><a class="navi-media">Фото и видео</a></li><!-- href="media.html" -->
-        <li><a class="navi-map">Карта штата</a></li><!-- href="map_of_state.html" -->
-        <li><a class="active-page" href="">Гостиницы</a></li>
+      <ul class="navi-links">
+        <li class="navi-info"><a>Информация</a></li><!-- href="info.html" -->
+        <li class="navi-media"><a>Фото и видео</a></li><!-- href="media.html" -->
+        <li class="navi-map"><a>Карта штата</a></li><!-- href="map_of_state.html" -->
+        <li class="navi-catalog"><a class="active-page">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -30,41 +30,45 @@
       
       <form class="search-tools-form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="form-fieldset">
+        <fieldset class="form-fieldset fieldset-infrastructure">
             <legend>Инфраструктура:</legend>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="infrastructure-pool"  checked>
-                  <!-- <span class="checkbox-indicator"></span> -->
-                  <!-- ^^^ Пока не решил, делать так или через ::after -->
-                  Бассейн
-            </label>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="infrastructure-parking-lot">
-                  Парковка
-            </label>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="infrastructure-wi-fi">
-                  Wi-fi
-            </label>
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="infrastructure-pool"  id="infrastructure-pool" checked>
+              <label for="infrastructure-pool">Бассейн</label>
+            </p>
+ 
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="infrastructure-parking-lot" id="infrastructure-parking-lot">
+              <label for="infrastructure-parking-lot">Парковка</label>
+            </p>
+            
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="infrastructure-wi-fi" id="infrastructure-wi-fi"> 
+              <label for="infrastructure-wi-fi">Wi-fi</label>
+            </p>
+
         </fieldset>
 
-        <fieldset class="form-fieldset">
+        <fieldset class="form-fieldset fieldset-housing">
             <legend>Тип жилья:</legend>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="housing-hotel" checked>
-                  Гостиница
-            </label>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="housing-motel" checked>
-                  Мотель
-            </label>
-            <label>
-                  <input class="visually-hidden" type="checkbox" name="housing-appartments" checked>
-                  Аппартаменты
-            </label>
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="housing-hotel" id="housing-hotel" checked>
+              <label for="housing-hotel">Гостиница</label>
+            </p>
+
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="housing-motel" id="housing-motel" checked>
+              <label for="housing-motel">Мотель</label>
+            </p>
+
+            <p class="checkbox-container">
+              <input class="visually-hidden checkbox-field" type="checkbox" name="housing-appartments" id="housing-appartments">
+              <label for="housing-appartments">Аппартаменты</label>
+            </p>
+
         </fieldset>
 
-        <fieldset class="form-fieldset">
+        <fieldset class="form-fieldset fieldset-price">
             <legend>Стоимость в сутки (р):</legend>
             <div class="housing-search-form-output">
                   <output id="housing-search-form-output" name="housing-search-form-output">10</output>
