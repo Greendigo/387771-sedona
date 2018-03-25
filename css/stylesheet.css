@@ -195,16 +195,21 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 400px;
   padding-top: 45px;
-  padding-right: 50px;
-  padding-bottom: 62px;
-  padding-left: 46px;
+  padding-right: 48px;
+  padding-bottom: 60px;
+  padding-left: 48px;
+}
+
+.feature-text-emphasis.feature-mini-item {
+  padding-right: 65px;
+  padding-left: 65px;
 }
 
 .feature-text-emphasis h3 {
   line-height: 21px;
   margin: 0;
   padding: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .feature-text-emphasis p {
