@@ -136,8 +136,7 @@ input[type="radio"].visually-hidden {
   background-color: #515F66;
   background-repeat: no-repeat;
   width: 1200px;
-  height: 564px;
-  margin-bottom: 62px;
+  height: 508px;
 }
 
 .title-image img {
@@ -148,14 +147,21 @@ input[type="radio"].visually-hidden {
 
 .introduction {
   color: #333;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 55px;
 }
 
 .introduction h2 {
   font-size: 21px;
+  padding: 0;
+  margin: 0 0 24px 0;
 }
 
 .introduction p {
   font-weight: normal;
+  padding: 0;
+  margin: 0;
 }
 
 .feature-container {
@@ -176,6 +182,8 @@ input[type="radio"].visually-hidden {
 .container-rich {
   background-color: #81b3d2;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .container-mini {
@@ -183,8 +191,29 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-text-emphasis {
-  padding-top: 50px;
-  padding-bottom: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 400px;
+  padding-top: 45px;
+  padding-right: 50px;
+  padding-bottom: 62px;
+  padding-left: 46px;
+}
+
+.feature-text-emphasis h3 {
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+}
+
+.feature-text-emphasis p {
+  margin: 0;
+  padding: 0;
+}
+
+.feature-text-emphasis p:first-of-type {
+  margin-bottom: 21px;
 }
 
 .feature-image {
@@ -196,25 +225,61 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
-  diplay: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: top;
 }
 
-.feature-ad-item.ad-item-housing {
+.feature-ad-item {
+  box-sizing: border-box;
+  width: 400px;
+  position: relative;
+  padding: 161px 50px 83px 50px;
+  text-align: center;
+}
+
+.feature-ad-item h3 {
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.feature-ad-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.feature-ad-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  background-repeat: no-repeat;
+}
+
+.ad-item-housing::before {
   background-image: url("../img/icon-house.svg");
-  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: 60px;
+  margin-left: -38px;
 }
 
-
-.feature-ad-item.ad-item-food {
+.ad-item-food::before {
   background-image: url("../img/icon-burger.svg");
-  background-repeat: no-repeat;
+  width: 75px;
+  height: 70px;
+  top: 61px;
+  margin-left: -38px;
 }
 
-
-.feature-ad-item.ad-item-gifts {
+.ad-item-gifts::before {
   background-image: url("../img/icon-gift.svg");
-  background-repeat: no-repeat;
+  width: 64px;
+  height: 76px;
+  top: 56px;
+  margin-left: -32px;
 }
 
 .feature-mini-list {
@@ -222,6 +287,8 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .housing-search > p {
