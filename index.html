@@ -115,11 +115,15 @@
 
 				<p class="form-group form-group-half">
 	        <label for="amount-adults">Взрослые:</label>
-	        <input type="number" id="amount-adults" name="amount-adults" min=1 value=2>
+	        <button type="button">плюс</button>
+	        <input type="text" id="amount-adults" name="amount-adults" min=1 value=2>
+	        <button type="button">минус</button>
         </p>
         <p class="form-group form-group-half">
-	        <label for="amount-kids">Дети:</label>
-	        <input type="number" id="amount-kids" name="amount-kids" min=0 value=0>
+	        <label class="amount-kids" for="amount-kids">Дети:</label>
+	        <button type="button">плюс</button>
+	        <input type="text" id="amount-kids" name="amount-kids" min=0 value=0>
+	        <button type="button">минус</button>
         </p>
         <button type="submit">Найти</button>
       </form>

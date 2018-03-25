@@ -296,32 +296,31 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
-.housing-search > p {
-  font-weight: normal;
+.housing-search {
+  text-align: center;
+  padding: 0;
+  padding-top: 55px;
 }
 
 .housing-search > h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
   line-height: 30px;
   font-size: 36px;
 }
 
-/*.housing-search-form {
-  width: 568;
-  height: 395;
-}*/
-
-.housing-search > button,
-.housing-search-form > button {
-  font: inherit;
-  font-size: 21px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-
-  border: none;
+.housing-search > p {
+  width: 445px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  font-weight: normal;
 }
 
 .housing-search > button {
+  padding: 0;
+  margin: 0;
   width: 568px;
   height: 86px;
   color: #fff;
@@ -336,6 +335,73 @@ input[type="radio"].visually-hidden {
 .housing-search > button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
+}
+
+.housing-search-form {
+  box-sizing: border-box;
+  width: 568px;
+  margin: 0 auto;
+  padding: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 100,255,0.4)
+}
+
+.form-group {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label {
+  margin-right: auto;
+}
+
+.form-group-half {
+  padding-bottom: 54px;
+}
+
+.form-group input {
+  box-sizing: border-box;
+  width: 346px;
+  margin: 0;
+  padding: 6px 13px;
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: 700; /*Где это сбрасывается?*/
+}
+
+.form-group-half {
+  width: 50%;
+}
+
+.form-group-half button,
+.form-group-half input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 38px;
+  margin: 0;
+  padding: 6px 13px 6px 13px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.amount-kids {
+  margin-left: 50px;
+}
+
+.housing-search > button,
+.housing-search-form > button {
+  font: inherit;
+  font-size: 21px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
 }
 
 .housing-search-form > button {
@@ -362,9 +428,6 @@ input[type="radio"].visually-hidden {
   height: 593px;
 }
 
-/*.form-group {
-  width: 100%;
-}*/
 
 /*.form-group-half {
   width: 50%;
