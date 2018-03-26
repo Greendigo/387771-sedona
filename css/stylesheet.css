@@ -361,17 +361,91 @@ input[type="radio"].visually-hidden {
   font-weight: 700; /*Где это сбрасывается?*/
 }
 
+.button-calendar {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 21px;
+  heught: 22px;
+  margin: 0 0 0 -30px;
+  border: none;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
 }
 
-.form-group-half button,
+.button-calendar:focus path,
+.button-calendar:focus rect,
+.button-calendar:hover path,
+.button-calendar:hover rect {
+  fill: #669ec0;
+}
+
+.button-calendar:active rect,
+.button-calendar:active path {
+  fill: #000000;
+}
+
+.form-minus-plus {
+  margin: 0;
+  padding: 0;
+  width: 114px;
+}
+
+.button-minus,
+.button-plus,
 .form-group-half input {
   display: inline-block;
   box-sizing: border-box;
   width: 38px;
+  height: 38px;
   margin: 0;
-  padding: 6px 13px 6px 13px;
   border: none;
   background-color: #f2f2f2;
+}
+
+.form-group-half input {
+  padding: 6px 13px 6px 13px;
+}
+
+.button-minus,
+.button-plus {
+  position: relative;
+  padding: 0;
+}
+
+.button-minus:after,
+.button-plus:after,
+.button-plus:before {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  top: 50%
+  left: 50%;
+  margin: -1px 0 0 -6px;
+  background-color: #a9a9a9;
+}
+
+.button-plus:before {
+  transform: rotate(-90deg);
+}
+
+.button-minus:hover:before,
+.button-minus:hover:after,
+.button-plus:hover:before,
+.button-plus:hover:after,
+.button-minus:focus:before,
+.button-minus:focus:after,
+.button-plus:focus:before,
+.button-plus:focus:after {
+  background-color: #000000;
+}
+
+.button-minus:active:before,
+.button-minus:active:after,
+.button-plus:active:before,
+.button-plus:active:after {
+  background-color: #81b3d2;
 }
 
 .amount-kids {
