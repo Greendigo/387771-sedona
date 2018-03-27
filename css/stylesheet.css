@@ -90,7 +90,6 @@ input[type="radio"].visually-hidden {
 }
 
 .navi-links li {
-  vertical-align: center;
   padding: 15px 0;
   width: 115px;
 }
@@ -128,18 +127,6 @@ input[type="radio"].visually-hidden {
 
 /* ------------------- index -------------------*/
 
-/*Не успел - форму, слайдеры в каталоге*/
-
-/*
-Можно ли оставить <br> в заголовках в индексе? В данном случае ведь,
-по моему, он по смыслу прямо хорошо вписывается - должнен быть двустрочный 
-заголовок, даже несмотря на то, что все вмещалось в одну строчку - мы просто берем
-и в нужном месте между словами переносим.
-Плюс если для него задать паддинг, то если, скажем, добавить к нему одно слово
-(например, "настоящий маленький городок"), то он рискует разползтись уже на 3
-строки.
-Ну и да, мне лень вымерять паддинги.
-*/
 .title-image {
   background-image: url("../img/sedona-title-image-w-mask-w-effects.jpg");
   background-color: #515F66;
@@ -302,6 +289,7 @@ input[type="radio"].visually-hidden {
 .housing-search {
   text-align: center;
   padding: 55px 0 0 0;
+  position: relative;
 }
 
 .housing-search > h2 {
@@ -318,14 +306,23 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
+.housing-search-switch,
+.housing-search-form > button {
+  font: inherit;
+  font-size: 21px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
 .housing-search-switch {
   padding: 0;
   margin: 0;
   width: 568px;
   height: 86px;
-  color: #ffffff;
   background-color: #766357;
-  border: none;
 }
 
 .housing-search-switch:focus,
@@ -339,13 +336,16 @@ input[type="radio"].visually-hidden {
 }
 
 .housing-search-form {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -284px;
   box-sizing: border-box;
   width: 568px;
-  margin: 0 auto;
   padding: 55px;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(255, 100,255,0.4)
+  background-color: #ffffff;
 }
 
 .form-group {
@@ -363,6 +363,7 @@ input[type="radio"].visually-hidden {
 
 .form-group label {
   margin-right: auto;
+  cursor: pointer;
 }
 
 .form-group input {
@@ -372,19 +373,21 @@ input[type="radio"].visually-hidden {
   padding: 6px 13px;
   border: none;
   background-color: #f2f2f2;
-  font-weight: 700; /*Где это сбрасывается?*/
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .button-calendar {
   display: inline-block;
   box-sizing: border-box;
   width: 21px;
-  heught: 22px;
+  height: 22px;
   margin: 0 0 0 -30px;
   border: none;
   background-color: #f2f2f2;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .button-calendar:focus path,
@@ -425,6 +428,7 @@ input[type="radio"].visually-hidden {
 .button-plus {
   position: relative;
   padding: 0;
+  cursor: pointer;
 }
 
 .button-minus:after,
@@ -434,7 +438,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 11px;
   height: 3px;
-  top: 50%
+  top: 50%;
   left: 50%;
   margin: -1px 0 0 -6px;
   background-color: #a9a9a9;
@@ -466,21 +470,9 @@ input[type="radio"].visually-hidden {
   margin-left: 50px;
 }
 
-.housing-search > button,
-.housing-search-form > button {
-  font: inherit;
-  font-size: 21px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-
-  border: none;
-}
-
 .housing-search-form > button {
   width: 458px;
   height: 58px;
-  color: #ffffff;
   background-color: #81b3d2;
 }
 
@@ -514,7 +506,7 @@ input[type="radio"].visually-hidden {
 
 .search-tools-form {
   margin: 0;
-  padding: 31px 73px;
+  padding: 30px 73px;
   display: flex;
 }
 
@@ -540,11 +532,6 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
-.form-fieldset button {
-  line-height: 21px;
-  border: none;
-}
-
 .fieldset-infrastructure {
   width: 200px;
   margin-right: 54px;
@@ -556,7 +543,9 @@ input[type="radio"].visually-hidden {
 }
 
 .fieldset-price {
+  box-sizing: border-box;
   width: 328px;
+  padding-left: 10px;
 }
 
 .fieldset-infrastructure .checkbox-container {
@@ -605,6 +594,108 @@ input[type="radio"].visually-hidden {
 }
 
 /*Слайдеры сделаю завтра, пока не дошел*/
+.fieldset-price legend {
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 16px;
+}
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .price-min,
+.price-controls .price-max {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.slider-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.slider-controls .slider-empty {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.slider-controls .slider-filled {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.slider-thumb {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+
+.slider-thumb-min {
+  left: 0;
+}
+
+.slider-thumb-max {
+  left: 80%;
+}
+
+.fieldset-price .button-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.fieldset-price .button-transparent:focus,
+.fieldset-price .button-transparent:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
 
 .housing-search-results {
   margin: 0;
@@ -615,7 +706,6 @@ input[type="radio"].visually-hidden {
 }
 
 .housing-search-results h2 {
-  /*display: inline-block;*/
   box-sizing: border-box;
   width: 220px;
   margin: 0;
@@ -829,7 +919,6 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-/*Откуда берутся красные кружки?*/
 .rating-stars-list {
   position: absolute;
   top: 0;
@@ -856,7 +945,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 0;
   right: 0;
-  widht: 111px;
+  box-sizing: border-box;
+  width: 111px;
   padding: 3px 13px 3px 16px;
   margin: 0;
   color: #666666;
@@ -949,5 +1039,5 @@ TODO
 сдвиг мутной картинки
 inline block лишние пробелы
 почистить картинки
-тз прочитать и проверит на соответствие
+тз прочитать и проверить на соответствие
  */
