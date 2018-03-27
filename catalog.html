@@ -75,16 +75,18 @@
 
         <fieldset class="form-fieldset fieldset-price">
             <legend>Стоимость в сутки (р):</legend>
-            <div class="housing-search-form-output">
-                  <output id="housing-search-form-output" name="housing-search-form-output">10</output>
+            <div class="price-controls">
+              <label class="price-min">от <input type="text" name="min-price" value="0"></label>
+              <label class="price-max">до <input type="text" name="max-price" value="3000"></label>
             </div>
-            <label>
-              <span class="visually-hidden">0</span>
-              <input type="range" id="housing-search-form-slider" min=0 max=3600 step=100 value=200>
-              <span class="visually-hidden">3600</span>
-            </label>
-
-            <button type="submit">Показать</button>
+            <div class="slider-controls">
+              <div class="slider-empty">
+                <div class="slider-filled"></div>
+              </div>
+              <div class="slider-thumb slider-thumb-min"></div>
+              <div class="slider-thumb slider-thumb-max"></div>
+            </div>
+            <button type="submit" class="button-transparent">Показать</button>
         </fieldset>
       </form>
     </section>
