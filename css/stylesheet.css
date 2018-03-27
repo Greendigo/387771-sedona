@@ -593,7 +593,16 @@ input[type="radio"].visually-hidden {
   height: 23px;
 }
 
-/*Слайдеры сделаю завтра, пока не дошел*/
+/*
+Это вот вообще правильно сделано?
+Почему-то не пашет
+И селектор здесь длинный, короче же его нельзя сделать, 
+как я понимаю, так как нам важна привязка к отмеченности чекбокса?
+ */
+.checkbox-field:disabled + label::before path {
+  fill: #6a6a6a;
+}
+
 .fieldset-price legend {
   margin-bottom: 15px;
   padding: 0;
