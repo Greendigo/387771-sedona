@@ -54,7 +54,8 @@ input[type="radio"].visually-hidden {
   padding: 0;
   width: 1200px;
   box-sizing: border-box;
-  background-color: #ffffff
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2); 
 }
 
 .site-navi {
@@ -144,13 +145,13 @@ input[type="radio"].visually-hidden {
 .introduction {
   color: #333333;
   text-align: center;
-  padding: 60px 0 55px 0;
+  padding: 60px 0 52px 0;
 }
 
 .introduction h2 {
   font-size: 21px;
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 0 0 27px 0;
 }
 
 .introduction p {
@@ -192,6 +193,12 @@ input[type="radio"].visually-hidden {
   padding: 45px 48px 60px 48px;
 }
 
+.feature-mini-item {
+  /*остальные прописаны в feature-text-emphasis*/
+  padding-top: 47px;
+  padding-bottom: 58px;
+}
+
 /*Здесь, думаю, уместно два оставить, тк переопределяются паддинги сверху*/
 .feature-text-emphasis.feature-mini-item {
   padding-right: 65px;
@@ -221,7 +228,7 @@ input[type="radio"].visually-hidden {
 .feature-ad-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 81px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -231,7 +238,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 400px;
   position: relative;
-  padding: 161px 50px 83px 50px;
+  padding: 161px 50px 0 50px;
   text-align: center;
 }
 
@@ -266,7 +273,7 @@ input[type="radio"].visually-hidden {
   width: 75px;
   height: 70px;
   top: 61px;
-  margin-left: -38px;
+  margin-left: -39px;
 }
 
 .ad-item-gifts::before {
@@ -288,21 +295,21 @@ input[type="radio"].visually-hidden {
 
 .housing-search {
   text-align: center;
-  padding: 55px 0 0 0;
+  padding: 50px 0 0 0;
   position: relative;
 }
 
 .housing-search > h2 {
   padding: 0;
-  margin: 0 0 28px 0;
-  line-height: 30px;
-  font-size: 36px;
+  margin: 0 0 22px 0;
+  line-height: 36px;
+  font-size: 30px;
 }
 
 .housing-search-instruction {
   width: 445px;
   padding: 0;
-  margin: 0 auto 46px auto;
+  margin: 0 auto 45px auto;
   font-weight: normal;
 }
 
@@ -354,6 +361,7 @@ input[type="radio"].visually-hidden {
   padding: 0 0 30px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .form-group-half {
@@ -373,8 +381,28 @@ input[type="radio"].visually-hidden {
   padding: 6px 13px;
   border: none;
   background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
   font-weight: 700;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+.form-group input:hover {
+  background-color: #ebebeb;
+}
+
+/*
+Когда прокликиваешь табом, календарик съезжает немного
+и фон серый у него появляется, это допустимо?
++
+Должны ли циферки внизу реагировать?
+*/
+.form-group input:focus {
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #e5e5e5;
 }
 
 .button-calendar {
@@ -382,7 +410,8 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 21px;
   height: 22px;
-  margin: 0 0 0 -30px;
+  margin: 7px 9px 9px -30px;
+  padding: 0;
   border: none;
   background-color: #f2f2f2;
   border: none;
@@ -394,18 +423,12 @@ input[type="radio"].visually-hidden {
 .button-calendar:focus rect,
 .button-calendar:hover path,
 .button-calendar:hover rect {
-  fill: #669ec0;
+  fill: #000000;
 }
 
 .button-calendar:active rect,
 .button-calendar:active path {
-  fill: #000000;
-}
-
-.form-minus-plus {
-  margin: 0;
-  padding: 0;
-  width: 114px;
+  fill: #669ec0;
 }
 
 .button-minus,
@@ -421,7 +444,8 @@ input[type="radio"].visually-hidden {
 }
 
 .form-group-half input {
-  padding: 6px 13px 6px 13px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .button-minus,
@@ -430,6 +454,13 @@ input[type="radio"].visually-hidden {
   padding: 0;
   cursor: pointer;
 }
+
+
+/*Почему эти селекторы не работают?*/
+/*.amount-adults ~ .button-plus {*/
+/*.group-half-adults .button-plus {*/
+  /*padding-right: 3px;*/
+/*}*/
 
 .button-minus:after,
 .button-plus:after,
@@ -975,7 +1006,9 @@ input[type="radio"].visually-hidden {
 
 .site-footer b {
   display: inline-block;
-  width: 241px;
+  width: 256px;
+  margin: 0 0px 2px 0;
+  padding: 0;
   font-size: 21px;
   text-align: center;
 }
@@ -986,9 +1019,10 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  width: 256px;
+  padding: 0 54px 0 52px;
 }
 
 .button-social {
@@ -1016,10 +1050,11 @@ input[type="radio"].visually-hidden {
 
 .authority-mark {
   position: relative;
-  width: 241px;
+  box-sizing: border-box;
+  width: 256px;
   font-weight: normal;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 0 15px;
+  margin: 0 0 2px 0;
 }
 
 .authority-mark span {
@@ -1030,7 +1065,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 50%;
   left: 113px;
-  margin: -20px 0 0 -17px;
+  margin: -20px 0 0 1px;
 }
 
 .html-academy:focus path,
@@ -1041,12 +1076,3 @@ input[type="radio"].visually-hidden {
 .html-academy:active path {
   fill: rgba(0, 0, 0, 0.3);
 }
-
-/*
-TODO
-тень
-сдвиг мутной картинки
-inline block лишние пробелы
-почистить картинки
-тз прочитать и проверить на соответствие
- */
