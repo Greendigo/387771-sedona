@@ -455,12 +455,9 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-
-/*Почему эти селекторы не работают?*/
-/*.amount-adults ~ .button-plus {*/
-/*.group-half-adults .button-plus {*/
-  /*padding-right: 3px;*/
-/*}*/
+.group-half-adults .button-plus {
+  margin-right: 3px;
+}
 
 .button-minus:after,
 .button-plus:after,
