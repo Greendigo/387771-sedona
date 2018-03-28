@@ -622,13 +622,19 @@ input[type="radio"].visually-hidden {
 }
 
 /*
-Это вот вообще правильно сделано?
-Почему-то не пашет
-И селектор здесь длинный, короче же его нельзя сделать, 
-как я понимаю, так как нам важна привязка к отмеченности чекбокса?
- */
-.checkbox-field:disabled + label::before path {
-  fill: #6a6a6a;
+Все равно не пашет
+
+И вопрос ниже все еще актуален
+
+И селектор здесь длинный, короче же его нельзя сделать,  
+как я понимаю, так как нам важна привязка к отмеченности чекбокса? 
+*/
+.checkbox-field:checked:disabled + label::before path {
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
+.checkbox-field:not(:checked):disabled + label::before path {
+  background-image: url("../img/checkbox-off-disabled.svg");
 }
 
 .fieldset-price legend {
