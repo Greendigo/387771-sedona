@@ -527,6 +527,7 @@ input[type="radio"].visually-hidden {
 .housing-search-tools {
   background-image: url("../img/sedona-title-image-blurred-w-effects.jpg");
   background-repeat: no-repeat;
+  background-position: 0 -55px;
   background-color: #81b3d2;
   width: 1200px;
   color: #ffffff;
@@ -534,7 +535,7 @@ input[type="radio"].visually-hidden {
 
 .search-tools-form {
   margin: 0;
-  padding: 30px 73px;
+  padding: 27px 72px 32px 72px;
   display: flex;
 }
 
@@ -550,7 +551,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-fieldset legend {
-  margin: 0 0 29px 0;
+  margin: 0 0 25px 0;
   padding: 0;
   font-size: 16px;
 }
@@ -570,27 +571,26 @@ input[type="radio"].visually-hidden {
   margin-right: auto;
 }
 
-.fieldset-price {
-  box-sizing: border-box;
-  width: 328px;
-  padding-left: 10px;
-}
-
 .fieldset-infrastructure .checkbox-container {
-  padding-left: 40px;
+  padding-left: 39px;
 }
 
 .fieldset-housing .checkbox-container {
-  padding-left: 42px;
+  margin-left: 1px;
+  padding-left: 41px;
 }
 
 .checkbox-container {
-  margin: 0 0 23px 0;
+  margin: 0 0 25px 0;
   padding: 0;
   position: relative;
 }
 
-.checkbox-container:last-child {
+.checkbox-container:nth-of-type(2) {
+  margin-bottom: 24px;
+}
+
+.checkbox-container:last-of-type {
   margin-bottom: 0;
 }
 
@@ -603,7 +603,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   width: 23px;
@@ -614,21 +614,13 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   width: 26px;
   height: 23px;
 }
 
-/*
-Все равно не пашет
-
-И вопрос ниже все еще актуален
-
-И селектор здесь длинный, короче же его нельзя сделать,  
-как я понимаю, так как нам важна привязка к отмеченности чекбокса? 
-*/
 .checkbox-field:checked:disabled + label::before path {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
@@ -637,19 +629,27 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
 
+.fieldset-price {
+  box-sizing: border-box;
+  width: 318px;
+  padding-left: 1px;
+}
+
 .fieldset-price legend {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 0;
   font-size: 16px;
 }
+
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 32px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
+
 .price-controls::after {
   content: "";
   position: absolute;
@@ -660,18 +660,26 @@ input[type="radio"].visually-hidden {
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
-.price-controls label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-  cursor: pointer;
-}
 
 .price-controls .price-min,
 .price-controls .price-max {
-  width: 90px;
-  padding-left: 65px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 0 4px 0;
+  width: 25px;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.price-controls .price-min {
+  margin-left: 63px;
+  width: 93px;
+}
+
+.price-controls .price-max {
+  margin-left: 54px;
+  width: 103px;
 }
 
 .price-controls input {
@@ -694,7 +702,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls .slider-filled {
-  width: 80%;
+  width: 252px;
   height: 2px;
   background: #ffffff;
 }
@@ -717,13 +725,15 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-thumb-max {
-  left: 80%;
+  left: 252px;
 }
 
 .fieldset-price .button-transparent {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+  box-sizing: border-box;
+  width: 137;
+  margin: 0 96px 0 auto;
+  padding: 6px 34px 5px 34px;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
@@ -752,7 +762,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 220px;
   margin: 0;
-  padding: 32px 0 32px 73px;
+  padding: 31px 0 28px 72px;
   text-align: left;
   font-size: 21px;
   border-bottom: 1px solid #e5e5e5;
@@ -762,7 +772,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 980px;
   margin: 0;
-  padding: 0 73px 0 16px;
+  padding: 31px 73px 28px 16px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e5e5e5;
@@ -772,7 +782,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 76px;
   margin: 0 39px 0 0;
-  padding: 34px 0;
+  padding: 0;
   font-size: 12px;
 }
 
@@ -790,7 +800,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 238px;
   margin-right: auto;
-  padding-top: 32px;
+  padding-top: 0;
 }
 
 .sorting-parameters a {
@@ -823,9 +833,9 @@ input[type="radio"].visually-hidden {
 
 .sorting-destination {
   box-sizing: border-box;
-  width: 35px;
+  width: 34px;
   margin-right: 1px;
-  padding: 39px 0 36px 0;
+  padding: 0;
 }
 
 .sorting-asc:focus path,
@@ -853,7 +863,7 @@ input[type="radio"].visually-hidden {
 .search-results-item {
   list-style: none;
   margin: 0;
-  padding: 30px 73px;
+  padding: 31px 73px 29px 72px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -905,7 +915,7 @@ input[type="radio"].visually-hidden {
   line-height: 21px;
   display: inline-block;
   box-sizing: border-box;
-  width: 115px;
+  width: 112px;
   margin: 0;
   padding: 0;
 
@@ -921,7 +931,7 @@ input[type="radio"].visually-hidden {
 
 .hotel-card-button {
   margin: 0 6px 0 0;
-  padding: 3px 17px;
+  padding: 3px 17px 3px 16px;
   line-height: 21px;
   color: #ffffff;
   border: none;
@@ -933,6 +943,7 @@ input[type="radio"].visually-hidden {
 
 .button-reserve {
   background-color: #766357;
+  padding-right: 17px;
 }
 
 .button-detailed:focus,
@@ -967,7 +978,7 @@ input[type="radio"].visually-hidden {
   top: 0;
   right: 0;
   padding: 0;
-  margin: 0;
+  margin-top: -1px;
   height: 17px;
   width: 115px;
   display: flex;
@@ -977,7 +988,7 @@ input[type="radio"].visually-hidden {
 .rating-stars-list li {
   list-style: none;
   padding: 0;
-  margin: 0 0 0 5px;
+  margin-left: 5px;
   height: 17px;
   width: 18px;
   background-image: url("../img/icon-star.svg");
@@ -990,7 +1001,7 @@ input[type="radio"].visually-hidden {
   right: 0;
   box-sizing: border-box;
   width: 111px;
-  padding: 3px 13px 3px 16px;
+  padding: 3px 13px 3px 15px;
   margin: 0;
   color: #666666;
   font-weight: normal; 
