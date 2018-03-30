@@ -26,7 +26,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
-  background-color: #f2f2f2
+  background-color: #f2f2f2;
 }
 
 a {
@@ -378,8 +378,8 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 346px;
   margin: 0;
-  padding: 6px 13px;
-  border: none;
+  padding: 5px 13px;
+  border: 1px solid transparent;
   background-color: #f2f2f2;
   font-size: 14px;
   line-height: 26px;
@@ -621,11 +621,11 @@ input[type="radio"].visually-hidden {
   height: 23px;
 }
 
-.checkbox-field:checked:disabled + label::before path {
+.checkbox-field:checked:disabled + label::before {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
 
-.checkbox-field:not(:checked):disabled + label::before path {
+.checkbox-field:not(:checked):disabled + label::before {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
 
