@@ -343,7 +343,17 @@ input[type="radio"].visually-hidden {
   background-color: #503e33;
 }
 
+@keyframes drop-down {
+  0% { transform: translateY(-15px); }
+  20% { transform: translateY(-12px); }
+  40% { transform: translateY(-9px); }
+  60% { transform: translateY(-6px); }
+  80% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
 .housing-search-form {
+  display: none;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -351,13 +361,14 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 568px;
   padding: 55px;
-  display: flex;
-  flex-wrap: wrap;
   background-color: #ffffff;
 }
 
-.housing-search-form-hidden {
-  display: none;
+.housing-search-form-js-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: drop-down;
+  animation-duration: 0.3s;
 }
 
 .form-group {

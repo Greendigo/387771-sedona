@@ -16,8 +16,8 @@ try {
 
 formSwitch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  form.classList.toggle("housing-search-form-hidden");
-  if (!form.classList.contains("housing-search-form-hidden")) {
+  form.classList.toggle("housing-search-form-js-toggle");
+  if (!form.classList.contains("housing-search-form-js-toggle")) {
     fieldDateArrival.focus();
 
     if (dateArrival) {
