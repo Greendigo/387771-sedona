@@ -639,7 +639,7 @@ input[type="radio"].visually-hidden {
   padding-left: 1px;
 }
 
-.checkbox-field + label:focus::before,
+.checkbox-field:focus + label::before,
 .checkbox-field + label:hover::before {
   outline: 3px solid #81b3d2;
 }
