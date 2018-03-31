@@ -50,6 +50,7 @@ input[type="radio"].visually-hidden {
 
 /* ------------------- header -------------------*/
 .container {
+  position: relative;
   margin: 0 auto;
   padding: 0;
   width: 1200px;
@@ -523,7 +524,6 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   width: 1200px;
   height: 593px;
-  margin-bottom: -120px;
 }
 
 /* ------------------- catalog -------------------*/
@@ -1015,6 +1015,10 @@ input[type="radio"].visually-hidden {
 
 /* ------------------- footer -------------------*/
 .site-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 36px 73px;
   display: flex;
   justify-content: space-between;
