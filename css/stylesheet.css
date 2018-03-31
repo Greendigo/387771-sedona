@@ -355,6 +355,10 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.housing-search-form-hidden {
+  display: none;
+}
+
 .form-group {
   width: 100%;
   margin: 0;
