@@ -353,7 +353,6 @@ input[type="radio"].visually-hidden {
 }
 
 .housing-search-form {
-  display: none;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -361,14 +360,15 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 568px;
   padding: 55px;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #ffffff;
+  animation-name: drop-down;
+  animation-duration: 0.3s;
 }
 
 .housing-search-form-js-toggle {
-  display: flex;
-  flex-wrap: wrap;
-  animation-name: drop-down;
-  animation-duration: 0.3s;
+  display: none;
 }
 
 .form-group {

@@ -14,6 +14,8 @@ try {
   isStorageSupported = false;
 }
 
+form.classList.toggle("housing-search-form-js-toggle");
+
 formSwitch.addEventListener("click", function (evt) {
   evt.preventDefault();
   form.classList.toggle("housing-search-form-js-toggle");
