@@ -58,8 +58,8 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2); 
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .site-navi {
@@ -1159,7 +1159,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   vertical-align: middle;
   width: 256px;
-  margin: 0 0px 2px 0;
+  margin: 0 0 2px 0;
   padding: 0;
   font-size: 21px;
   text-align: center;
