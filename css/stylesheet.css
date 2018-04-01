@@ -151,7 +151,7 @@ input[type="radio"].visually-hidden {
 
 .introduction h2 {
   font-size: 21px;
-  padding: 0;
+  padding: 0 300px;
   margin: 0 0 27px 0;
 }
 
@@ -209,7 +209,7 @@ input[type="radio"].visually-hidden {
 .feature-text-emphasis h3 {
   line-height: 21px;
   margin: 0 0 25px 0;
-  padding: 0;
+  padding: 0 55px;
 }
 
 .feature-text-emphasis p {
