@@ -810,6 +810,10 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.slider-thumb:hover {
+  top: -10px;
+  border: 9px solid #ffffff;
+}
 
 .slider-thumb-min {
   left: 0;
